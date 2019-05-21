@@ -1,0 +1,12 @@
+<h1><%= @food.id ? 'Edit Food' : 'Create Food' %></h1>
+<hr />
+<%= form_with(model: [@user, @food], local: true, class: "row") do |f| %>
+  <%= f.label :item %>
+  <%= f.text_field :item, required: true, autofocus: true %>
+  <br />
+  <%= f.label :group %>
+  <%= f.text_field :group, required: true %>
+  <br />
+  <br />
+  <%= f.submit nil, class: "btn" %>
+<% end %>

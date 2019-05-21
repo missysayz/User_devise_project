@@ -1,0 +1,13 @@
+<h1>Edit User</h1>
+
+<%= form_with(model: @food, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, required: true, placeholder: "First Name" %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name%>
+    <%= f.text_field :last_name, required: true, placeholder:"Last Name"%>
+  </div>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Add Food</h1>
+<%= form_with(model: @food, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :item %>
+    <%= f.text_field :item, autofocus: true, required: true, placeholder: "Item" %>
+  </div>
+  <div class="field">
+    <%= f.label :group%>
+    <%= f.text_field :group, required: true, placeholder:"Group"%>
+  </div>
+  <%= f.submit %>
+<% end %>
